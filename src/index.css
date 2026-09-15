@@ -1,19 +1,91 @@
-:root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+@font-face {
+  font-family: "Les Flos Sage";
+  src: url("./assets/fonts/Les Flos Sage.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+@font-face {
+  font-family: 'MitmiFont';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/Ownglyph_meetme-Rg.woff2') format('woff2');
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MonoplexWideNerd';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-widenerd@1.0/MonoplexKRWideNerd-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MonoplexWideNerd';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-widenerd@1.0/MonoplexKRWideNerd-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MonoplexWideNerd';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-widenerd@1.0/MonoplexKRWideNerd-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MonoplexWideNerd';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-widenerd@1.0/MonoplexKRWideNerd-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MonoplexWideNerd';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-widenerd@1.0/MonoplexKRWideNerd-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MonoplexWideNerd';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-widenerd@1.0/MonoplexKRWideNerd-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MonoplexWideNerd';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-widenerd@1.0/MonoplexKRWideNerd-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MonoplexWideNerd';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-widenerd@1.0/MonoplexKRWideNerd-Text.woff2') format('woff2');
+  font-weight: 800;
+  font-display: swap;
+}
+
+:root {
+  --text: #794F27;
+  --text-h: #F8F8F0;
+  --yellow: #E9B62B;
+  --yellow-d: #D7A02B;
+  --green: #33A142;
+  --green-d: #D7A02B;
+  --blue: #5FA0D7;
+  --blue-d: #3E82BB;
+  --red: #DC7A76;
+  --red-shadow: rgba(184, 112, 110, 0.5) 0 0 8px 0;
+  --brown: #827157;
+  --brown-d: #645031;
+  --shadow: rgba(0, 0, 0, 0.15) 0 4px 12px 0px;
+
+  --sans: 'MitmiFont';
+  --heading: 'Les Flos Sage';
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
@@ -32,80 +104,299 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
+    --text: #794F27;
+    --text-h: #F8F8F0;
+    --yellow: #E9B62B;
+    --yellow-d: #D7A02B;
+    --green: #33A142;
+    --green-d: #D7A02B;
+    --blue: #5FA0D7;
+    --blue-d: #3E82BB;
+    --red: #DC7A76;
+    --red-shadow: rgba(184, 112, 110, 0.5) 0 0 8px 0;
+    --brown: #827157;
+    --brown-d: #645031;
+    --shadow: rgba(0, 0, 0, 0.15) 0 4px 12px 0px;
   }
 }
 
 body {
   margin: 0;
-}
-
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
+  padding: 48px;
+  width: 100vw;
+  height: 100vh;
+  background: url("./assets/ACNH_bg.jpg") center top / cover no-repeat;
   box-sizing: border-box;
 }
 
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
+/* 타이틀 시계 */
+.current-time {
+  font-family: 'Martian Mono';
+  font-weight: 900;
+  font-size: 10vw;
+  text-align: center;
   color: var(--text-h);
 }
 
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
-}
-
-code,
-.counter {
-  font-family: var(--mono);
+/* 날씨 버튼 */
+.weather-buttons {
   display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
+  gap: 20px;
+  position: fixed;
+  top: 48px;
+  right: 48px;
 }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+.weather-buttons button {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  border: 6px solid var(--weather-color);
+  color: var(--weather-color);
+  background-color: var(--text-h);
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.weather-buttons button:hover {
+  top: 2px;
+}
+
+.weather-buttons button:hover::after {
+  bottom: -12px;
+}
+
+.weather-buttons button::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: -6px;
+  bottom: -14px;
+  border-radius: 10px;
+  background: var(--weather-colored);
+  opacity: 1;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.weather-buttons button.active {
+  top: 8px;
+}
+
+.weather-buttons button.active::after {
+  bottom: -6px;
+}
+
+
+/* 플레이 버튼 */
+.player-controls {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.play-pause-button {
+  width: 120px;
+  height: 120px;
+  border: none;
+  border-radius: 120px;
+  background: var(--brown);
+  color: var(--text-h);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+}
+
+.play-pause-button::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-color: var(--brown-d);
+  border: none;
+  border-radius: 120px;
+  top: 8px;
+  left: 0;
+  z-index: -1;
+}
+
+.play-pause-button:hover {
+  top: 2px;
+}
+
+.play-pause-button:hover::after {
+  top: 6px;
+}
+
+.play-pause-button:active {
+  top: 8px;
+  transform: scale(0.97);
+}
+
+.play-pause-button:active::after {
+  top: 0px;
+}
+
+.player-message,
+.error-message {
+  text-align: center;
+  font-size: 14px;
+}
+
+
+.player-message {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 12px;
+  display: inline-block;
+  margin: 0;
+  padding: 12px 18px;
+
+  background: var(--text-h);
+  color: var(--brown);
+
+  border-radius: 12px;
+
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.15);
+}
+
+/* 말풍선 꼬리 */
+.player-message::before {
+  content: "";
+
+  position: absolute;
+  top: -10px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 0;
+  height: 0;
+
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid var(--text-h);
+}
+
+/* 볼륨 조절 */
+.volume-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 320px;
+  background-color: var(--text-h);
+  border: 6px solid var(--brown);
+  border-radius: 10px;
+  padding: 18px 20px;
+  position: fixed;
+  box-sizing: border-box;
+  bottom: 48px;
+  right: 48px;
+  z-index: 0;
+  isolation: isolate;
+}
+
+.button-shadow {
+  display: block;
+  background-color: var(--brown-d);
+  width: 320px;
+  height: 80px;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 40px;
+  right: 48px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+
+.volume-control input[type="range"] {
+  /* flex: 1; */
+  width: 240px;
+  cursor: pointer;
+  accent-color: var(--red);
+}
+
+.volume-control span {
+  width: 36px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.error-message {
+  color: #d65b5b;
+  font-size: 14px;
+}
+
+#volume {
+  --track-bg: #F2EBDD;
+  --track-fill: var(--red);
+  --thumb-size: 24px;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 100%;
+  height: var(--thumb-size);
+  margin: 0;
+
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Chrome / Edge / Safari */
+#volume::-webkit-slider-runnable-track {
+  height: 12px;
+  border-radius: 999px;
+
+  background: linear-gradient(to right,
+      var(--track-fill) 0%,
+      var(--track-fill) var(--progress),
+      var(--track-bg) var(--progress),
+      var(--track-bg) 100%);
+}
+
+#volume::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: var(--thumb-size);
+  height: var(--thumb-size);
+  margin-top: -6px;
+  border: 6px solid var(--red);
+  border-radius: 50%;
+  background: var(--text-h);
+  box-shadow: var(--red-shadow);
+}
+
+/* Firefox */
+#volume::-moz-range-track {
+  height: 12px;
+  border-radius: 999px;
+  background: var(--track-bg);
+}
+
+#volume::-moz-range-progress {
+  height: 12px;
+  border-radius: 999px;
+  background: var(--track-fill);
+}
+
+#volume::-moz-range-thumb {
+  width: var(--thumb-size);
+  height: var(--thumb-size);
+  border: 6px solid var(--red);
+  border-radius: 50%;
+  background: var(--text-h);
+  box-shadow: var(--red-shadow);
 }
